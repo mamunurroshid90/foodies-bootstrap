@@ -217,6 +217,25 @@ p {
   left: 0;
   width: 100%;
   background: var(--white-color);
-  box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.9);
+  box-shadow: 0 0.125rem 1.75rem 0 rgba(0, 0, 0, 0.09);
   transition: all 0.15s ease-in-out 0s;
+}
+
+/* top banner design */
+.top-banner {
+  width: 100%;
+  background: url("../images/bg/bg-1.jpg") no-repeat center;
+  background-size: cover;
+  padding: 16.875rem 0 9.375rem;
+}
+
+/* counter design */
+.counter-section {
+  background-color: var(--primary-color);
+  padding: 2.5rem 0;
+}
+
+.counter-section p {
+  color: var(--white-color);
+  text-transform: uppercase;
 }
