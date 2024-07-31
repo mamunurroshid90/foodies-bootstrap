@@ -1,5 +1,6 @@
 @media (max-width: 1024px) {
 }
+
 @media (max-width: 991px) {
   /* custom classes */
   .text-content {
@@ -20,7 +21,13 @@
   .top-banner {
     padding: 9.375rem 0 9.375rem;
   }
+
+  /* carousel design */
+  .testimonial-section .carousel-item .carousel-caption p {
+    padding: 0;
+  }
 }
+
 @media (max-width: 767px) {
   /* custom css */
   h1 {
@@ -40,6 +47,28 @@
     height: auto;
     padding: 3rem 0;
   }
+
+  /* carousel design */
+  .testimonial-section .carousel-item {
+    padding: 11rem 3.125rem;
+  }
+  /* form control */
+  .newsletter {
+    width: 80%;
+  }
+  .newsletter .main-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .footer .footer-link,
+  .footer a i {
+    padding: 0 0.7rem;
+  }
 }
+
 @media (max-width: 330px) {
+  /* carousel design */
+  .testimonial-section .carousel-item {
+    padding: 13rem 3.125rem;
+  }
 }
