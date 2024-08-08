@@ -18,24 +18,18 @@ navBar.forEach(function (a) {
 });
 
 // counter design
+let valueDisplays = document.querySelectorAll(".count");
+let interval = 5000;
 
-document.addEventListener("DOMContentLoaded", () => {
-  function counter(id, start, end, duration) {
-    let obj = document.getElementById(id);
-    current = start;
-    range = end - start;
-    increment = end > start ? 1 : -1;
-    step = Math.abs(Math.floor(duration / range));
-    timer = setInterval(() => {
-      current += increment;
-      obj.textContent = current;
-      if (current == end) {
-        clearInterval(timer);
-      }
-    }, step);
-  }
-  counter("count1", 0, 1254, 3000);
-  //   counter("count2", 100, 642, 3000);
-  //   counter("count3", 0, 856, 3000);
-  //   counter("count4", 0, 230, 3000);
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(() => {
+    startValue += 1;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
 });
